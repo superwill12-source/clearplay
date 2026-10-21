@@ -1,0 +1,6 @@
+{
+  "appId": "app.clearplay",
+  "appName": "ClearPlay",
+  "webDir": "www",
+  "plugins": { "CapacitorHttp": { "enabled": true } }
+}
