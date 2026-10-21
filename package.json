@@ -1,0 +1,12 @@
+{
+  "name": "clearplay",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": { "prep": "sh scripts/prep.sh" },
+  "dependencies": {
+    "@capacitor/android": "^6.1.0",
+    "@capacitor/cli": "^6.1.0",
+    "@capacitor/core": "^6.1.0",
+    "hls.js": "^1.5.13"
+  }
+}
