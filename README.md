@@ -1,24 +1,16 @@
-# ClearPlay
+# Concursa – passo a passo (sem programar)
 
-Cliente web de vídeos sem anúncios, sem login e sem rastreamento. Usa a API aberta do [Piped](https://github.com/TeamPiped/Piped) e funciona como site estático.
+1. GITHUB: crie conta em github.com > "New repository" (nome: concursa) > "uploading an existing file" e arraste TODO o conteúdo desta pasta (inclusive a pasta .github). Clique em Commit.
+2. SERVIDOR: crie conta em render.com (entre com o GitHub) > New > Blueprint > escolha o repositório > Apply. Copie o endereço https do serviço.
+3. LIGAR O APP: no GitHub > Settings > Secrets and variables > Actions > aba Variables > New repository variable. Nome: API_URL  Valor: o endereço do passo 2 (sem "/" no final).
+4. GERAR O APK: aba Actions > "Gerar APK" > Run workflow > espere ~8 min > baixe "concursa-apk" no fim da página, descompacte e instale.
 
-## Recursos
-Em alta por região · busca com sugestões (vídeos, canais, playlists) · player com qualidade, velocidade e modo só áudio · lives (HLS) · comentários · vídeos relacionados · canais e playlists · inscrições, histórico e "Ver depois" salvos localmente · tema claro/escuro · troca de instância da API.
-
-## Rodar
-```
-python3 -m http.server 8000
-```
-Abra http://localhost:8000. Para publicar: suba para o GitHub e ative Settings → Pages → Source: GitHub Actions.
-
-## Limitações
-- Depende de instâncias públicas do Piped, que podem cair ou limitar acesso. Troque em Ajustes.
-- Resoluções acima de 720p exigem DASH com áudio separado; ainda não implementado.
-- Sem login: não sincroniza inscrições nem curtidas com a conta do Google.
-- Respeite os Termos de Serviço do YouTube. Uso pessoal.
-
-Licença MIT.
-
-## APK Android
-O workflow `Build APK` (Actions) gera o APK com Capacitor a cada push. Baixe `clearplay-apk` na aba Actions, extraia o `app-debug.apk` e instale (permita "fontes desconhecidas").
-Local: `npm install && npm run prep && npx cap add android && npx cap sync android && cd android && ./gradlew assembleDebug`.
+## IA (cada pessoa usa a sua)
+No app, toque no ícone do robô no topo, escolha a IA e cole sua chave. Para criar a chave, entre com sua conta Google ou e-mail:
+- Google Gemini (grátis): aistudio.google.com/apikey
+- Groq (grátis): console.groq.com/keys
+- OpenRouter (modelos grátis): openrouter.ai/keys
+- ChatGPT/OpenAI: platform.openai.com/api-keys
+- Claude: console.anthropic.com
+- DeepSeek: platform.deepseek.com
+- Mistral: console.mistral.ai
